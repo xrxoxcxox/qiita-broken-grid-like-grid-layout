@@ -21,18 +21,24 @@ body {
   align-items: center;
   display: flex;
   grid-column: 1 / -1;
-  grid-row: 1 / 2;
   height: 8dvh;
   height: 8vh;
   justify-content: space-between;
   padding-inline: 2rem;
 }
 
-.logo {
+.header-logo {
   font-family: 'DM Serif Display', serif;
 }
 
-.image01 {
+.section01 {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: inherit;
+  grid-template-rows: inherit;
+}
+
+.section01-image01 {
   grid-column: 7 / -2;
   grid-row: 2 / 7;
   height: 88vh;
@@ -43,21 +49,23 @@ body {
   width: 100%;
 }
 
-.title {
+.section01-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 3rem;
+  font-size: 4rem;
   grid-column: 1 / -1;
   grid-row: 3 / 4;
+  line-height: 1.2;
   text-align: center;
 }
 
-.subtitle {
+.section01-subtitle {
+  font-size: 1.5rem;
   grid-column: 1 / -1;
   grid-row: 4 / 5;
   text-align: center;
 }
 
-.image02 {
+.section01-image02 {
   aspect-ratio: 1 / 1;
   grid-column: 2 / 5;
   grid-row: 5 / 6;
@@ -65,7 +73,7 @@ body {
   width: 100%;
 }
 
-.image03 {
+.section01-image03 {
   align-self: center;
   aspect-ratio: 1 / 1;
   grid-column: -3 / -1;
@@ -74,11 +82,29 @@ body {
   width: 100%;
 }
 
-.section {
+.section01-scroll {
+  color: #a8946b;
+  grid-column: -2 / -1;
+  grid-row: 6 / 7;
+  padding: 3rem 0 3rem 1rem;
+  position: relative;
+  writing-mode: vertical-lr;
+}
+
+.section01-scroll::after {
+  background-color: #a8946b;
+  content: "";
+  height: 100%;
+  left: 1.5rem;
+  margin-top: 1rem;
+  position: absolute;
+  width: 1px;
+}
+
+.section02 {
   background-color: #f7f4f3;
   display: grid;
   grid-column: 1 / -1;
-  grid-row: 7 / 10;
   grid-template-columns: inherit;
   grid-template-rows: inherit;
   padding-block: 8vh 6vh;
@@ -86,25 +112,26 @@ body {
   z-index: -1;
 }
 
-.section-left {
+.section02-left {
   grid-column: 3 / 8;
   grid-row: 1 / 2;
 }
 
-.section-title {
+.section02-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
-.section-paragraph {
+.section02-paragraph {
   margin-top: 2rem;
 }
 
-.section-paragraph + .section-paragraph {
+.section02-paragraph + .section02-paragraph {
   margin-top: 1rem;
 }
 
-.section-image01 {
+.section02-image01 {
   aspect-ratio: 3 / 1;
   grid-column: 3 / 8;
   grid-row: 2 / 4;
@@ -113,7 +140,7 @@ body {
   width: 100%;
 }
 
-.section-right {
+.section02-right {
   grid-column: 7 / -3;
   grid-row: 3 / 5;
 }
@@ -124,7 +151,6 @@ body {
   color: #fff;
   display: grid;
   grid-column: 1 / -1;
-  grid-row: 11 / 12;
   grid-template-columns: inherit;
   grid-template-rows: inherit;
   justify-content: space-between;
